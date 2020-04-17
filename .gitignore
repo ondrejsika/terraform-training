@@ -1,3 +1,9 @@
 .vscode
 .env
 .DS_Store
+
+# Terraform
+*.tfstate
+*.tfstate.backup
+*.tfvars
+.terraform.tfstate.lock.info
