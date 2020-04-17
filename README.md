@@ -7,3 +7,25 @@
 
 Source of my Terraform training
 
+## Install Terraform
+
+### Mac
+
+Using __brew__:
+
+```
+brew cask install terraform
+```
+
+### Linux
+
+Download from <https://terraform.io/downloads.html>
+
+### Windows
+
+Using __chocolatey__:
+
+```
+choco install terraform
+```
+
