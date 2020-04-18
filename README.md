@@ -132,6 +132,26 @@ More about input variables: https://www.terraform.io/docs/configuration/variable
 
 [docs](https://www.terraform.io/docs/providers/do/index.html)
 
+## Resource
+
+Examples:
+
+```hcl
+resource "digitalocean_ssh_key" "default" {
+  name       = "default"
+  public_key = file("~/.ssh/id_rsa.pub")
+}
+
+resource "digitalocean_droplet" "example" {
+  image    = "debian-10-x64"
+  name     = "example"
+  region   = "fra1"
+  size     = "s-1vcpu-1gb"
+  ssh_keys = [
+    digitalocean_ssh_key.default.fingerprint
+  ]
+}
+```
 
 
 ## Thank you! & Questions?
