@@ -6,6 +6,7 @@
 *.tfstate
 *.tfstate.backup
 *.tfvars
+!*-example.tfvars
 .terraform.tfstate.lock.info
 
 # Config
