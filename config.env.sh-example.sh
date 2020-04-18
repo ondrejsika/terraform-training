@@ -1,1 +1,2 @@
 export DIGITALOCEAN_TOKEN=xxx
+export TF_VAR_do_token=$DIGITALOCEAN_TOKEN
