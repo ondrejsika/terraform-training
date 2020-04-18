@@ -7,3 +7,6 @@
 *.tfstate.backup
 *.tfvars
 .terraform.tfstate.lock.info
+
+# Config
+config.env.sh

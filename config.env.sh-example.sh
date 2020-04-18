@@ -1,0 +1,1 @@
+export DIGITALOCEAN_TOKEN=xxx
