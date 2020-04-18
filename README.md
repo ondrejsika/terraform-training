@@ -95,9 +95,43 @@ A plugin for Terraform that makes a collection of related resources available. A
 
 Terraform providers are generally tied to a specific infrastructure provider, which might be DigitalOceam, AWS, CloudFlare, ...
 
+
+### Environment Variable Configuration
+
+This example requires DO token in `DIGITALOCEAN_TOKEN` environment varible.
+
 ```hcl
 provider "digitalocean" {}
 ```
+
+### Terraform Variable Configuration
+
+```hcl
+variable "do_token" {}
+
+provider "digitalocean" {
+  token = var.do_token
+}
+```
+
+Variable can be set in `.tfvars` file:
+
+```hcl
+# terraform.tfvars
+do_token = "xxx"
+```
+
+or in environment variable `TF_VAR_do_token`
+
+or using comand line argument `-var=do_token=xxx`
+
+More about input variables: https://www.terraform.io/docs/configuration/variables.html
+
+
+### Digital Ocean Provider
+
+[docs](https://www.terraform.io/docs/providers/do/index.html)
+
 
 
 ## Thank you! & Questions?
