@@ -153,6 +153,37 @@ resource "digitalocean_droplet" "example" {
 }
 ```
 
+### Data Source
+
+A resource-like object that can be configured in Terraform's configuration language.
+
+Unlike resources, data sources do not create or manage infrastructure. Instead, they return information about some kind of external object in the form of readable attributes. This allows a Terraform configuration to make use of information defined outside of Terraform, or defined by another separate Terraform configuration.
+
+```hcl
+data "digitalocean_ssh_key" "default" {
+  name = "default"
+}
+```
+
+Example usage:
+
+```hcl
+data "digitalocean_ssh_key" "default" {
+  name = "default"
+}
+
+resource "digitalocean_droplet" "example" {
+  image    = "debian-10-x64"
+  name     = "example"
+  region   = "fra1"
+  size     = "s-1vcpu-1gb"
+  ssh_keys = [
+    # here
+    data.digitalocean_ssh_key.default.fingerprint
+  ]
+}
+```
+
 ### Output
 
 Outputs are by default accessible on end of apply
