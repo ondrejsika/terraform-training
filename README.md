@@ -87,6 +87,19 @@ CloudFormation is very similar tool as Terraform. CloudFormation is AWS native a
 Terraform create Graph of your desired resources described in manifest files, compares them with actual statate (which is stored in state file or backend) and apply only changes using APIs of resource providers.
 
 
+## Build Infrastructure
+
+## Provider
+
+A plugin for Terraform that makes a collection of related resources available. A provider plugin is responsible for understanding API interactions with some kind of service and exposing resources based on that API.
+
+Terraform providers are generally tied to a specific infrastructure provider, which might be DigitalOceam, AWS, CloudFlare, ...
+
+```hcl
+provider "digitalocean" {}
+```
+
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? __Let's go for a beer!__
