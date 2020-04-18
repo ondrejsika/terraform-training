@@ -153,6 +153,39 @@ resource "digitalocean_droplet" "example" {
 }
 ```
 
+### Output
+
+Outputs are by default accessible on end of apply
+
+```hcl
+output "message" {
+  value = "Output"
+}
+```
+
+If you have senstitive data in output, you can use `sensitive = true` and output data will be NOT shown.
+
+```hcl
+output "secret" {
+  value = "Sensitive Output"
+  sensitive = true
+}
+```
+
+To see your output use:
+
+```
+terraform output <name>
+```
+
+Eg.:
+
+```
+terraform output message
+terraform output secret
+```
+
+![outputs](images/outputs.png)
 
 ## Thank you! & Questions?
 
