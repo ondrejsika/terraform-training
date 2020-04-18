@@ -1,4 +1,4 @@
-[sika.io](https://sika.io) | <ondrej@sika.io>
+[sika.io](https://sika.io) | <ondrej@sika.io> | [course ->](#course)
 
 # Terraform Training
 
