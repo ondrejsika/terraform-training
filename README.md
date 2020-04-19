@@ -89,6 +89,107 @@ Terraform create Graph of your desired resources described in manifest files, co
 
 ## Build Infrastructure
 
+Here is example ifrastructure described in `terraform.tf`. Components will be described later.
+
+```hcl
+provider "digitalocean" {}
+
+resource "digitalocean_ssh_key" "default" {
+  name       = "default"
+  public_key = file("~/.ssh/id_rsa.pub")
+}
+
+resource "digitalocean_droplet" "example" {
+  image    = "debian-10-x64"
+  name     = "example"
+  region   = "fra1"
+  size     = "s-1vcpu-1gb"
+  ssh_keys = [
+    digitalocean_ssh_key.default.fingerprint
+  ]
+}
+
+output "ip_addr" {
+  value = digitalocean_droplet.example.ipv4_address
+}
+```
+
+## Terraform CLI
+
+### `terraform init`
+
+Download providers & setup modules. You have to call `terraform init` when you want to add or update providers and modules.
+
+```
+terraform init
+```
+
+### `terraforn plan`
+
+Terraform plan creates execution plan. Compare your `.tf` manifests with actual state and determines which resources has to be created, updated or deleted.
+
+You can run `terraform plan` to see execution plan. Your plan will be shown but be NOT saved for apply. If you run `terraform apply`, execution plan will be created again.
+
+```
+terraform plan
+```
+
+If you want to save the plan and execute it, you can use parameter `-out terraform.tfplan` and your plan will be saved for future apply.
+
+```
+terraform plan -out terraform.tfplan
+```
+
+### `terraform apply`
+
+Terraform apply apply your desired state to actual state.
+
+`terraform plan` create execution plan (as `terraform plan`) and apply it. Terraform apply ask you for `yes` to confirm execution. If you say anything other than yes, Terraform will abort execution.
+
+```
+terraform apply
+```
+
+If you want run `terraform apply` in CI for example, you can confirm execution using parameter `-auto-approve`.
+
+```
+terraform apply -auto-approve
+```
+
+If you want to apply plan created by `terraform plan`, you have to use:
+
+```
+terraform apply terraform.tfplan
+```
+
+### `terraform output`
+
+Terraform output shows outputs defined in `.tf` files. Those outputs are also shown on end of apply.
+
+```
+terraform output
+```
+
+You can specify single output using `terraform output <output_name>`. Example:
+
+```
+terraform output ip_addr
+```
+
+### `terraform destroy`
+
+Terraform destroy destroys your ifrastructure created by Terraform.
+
+```
+terraform destroy
+```
+
+You can also use `-auto-approve`, for example for CI.
+
+```
+terraform destroy -auto-approve
+```
+
 ## Provider
 
 A plugin for Terraform that makes a collection of related resources available. A provider plugin is responsible for understanding API interactions with some kind of service and exposing resources based on that API.
