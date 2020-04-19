@@ -84,7 +84,7 @@ CloudFormation is very similar tool as Terraform. CloudFormation is AWS native a
 
 ## How Terraform Works
 
-Terraform create Graph of your desired resources described in manifest files, compares them with actual statate (which is stored in state file or backend) and apply only changes using APIs of resource providers.
+Terraform create Graph of your desired resources described in manifest files, compares them with actual state (which is stored in state file or backend) and apply only changes using APIs of resource providers.
 
 
 ## Build Infrastructure
