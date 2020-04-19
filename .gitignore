@@ -4,12 +4,10 @@
 
 # Terraform
 .terraform
-*.tfstate
-*.tfstate.backup
+*.tfstate*
 *.tfvars
 *.tfplan
 !*-example.tfvars
-.terraform.tfstate.lock.info
 
 # Config
 config.env.sh
