@@ -409,7 +409,15 @@ provisioner "local-exec" {
 
 A "backend" in Terraform determines how state is loaded and how an operation such as apply is executed. This abstraction enables non-local file state storage, remote execution, etc.
 
-#### Remote Backend
+### Backend Types
+
+- S3 - https://www.terraform.io/docs/backends/types/s3.html
+- Etcd - https://www.terraform.io/docs/backends/types/etcd.html
+- Consul - https://www.terraform.io/docs/backends/types/consul.html
+- Postgress - https://www.terraform.io/docs/backends/types/pg.html
+
+
+### Remote Backend
 
 Remote backend store state and execute operations from Terraform Cloud.
 
