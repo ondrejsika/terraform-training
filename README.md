@@ -403,6 +403,30 @@ provisioner "local-exec" {
 }
 ```
 
+## Backends
+
+[Docs](https://www.terraform.io/docs/backends/index.html)
+
+A "backend" in Terraform determines how state is loaded and how an operation such as apply is executed. This abstraction enables non-local file state storage, remote execution, etc.
+
+#### Remote Backend
+
+Remote backend store state and execute operations from Terraform Cloud.
+
+If you want to use Remote Backend, use this:
+
+```hcl
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "ondrejsika"
+    workspaces {
+      name = "demo"
+    }
+  }
+}
+```
+
 ## Modules
 
 [Docs](https://www.terraform.io/docs/modules/index.html)
