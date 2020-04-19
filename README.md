@@ -89,6 +89,19 @@ Terraform create Graph of your desired resources described in manifest files, co
 
 ## Build Infrastructure
 
+### Gitignore
+
+Base `.gitignore` for Terraform projects
+
+```gitignore
+.terraform
+*.tfstate*
+*.tfvars
+*.tfplan
+```
+
+### Simple Infrastructure Example
+
 Here is example ifrastructure described in `terraform.tf`. Components will be described later.
 
 ```hcl
