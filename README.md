@@ -442,6 +442,12 @@ Example usage here [examples/registry](examples/registry)
 
 I organize Hashicorp Meetups in Prague. More information at [meetups.hashicorp.cz](https://meetups.hashicorp.cz).
 
+### My Terraform Repositories
+
+- EN - https://ondrej-sika.com/repositories/#terraform
+- CS - https://ondrej-sika.cz/repozitare/#terraform
+
+or check all my Terraform repositories on Github: [github.com/ondrejsika](https://github.com/ondrejsika?tab=repositories&q=terraform&type=&language=)
 
 ## Thank you! & Questions?
 
