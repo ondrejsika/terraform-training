@@ -7,6 +7,7 @@
 *.tfstate
 *.tfstate.backup
 *.tfvars
+*.tfplan
 !*-example.tfvars
 .terraform.tfstate.lock.info
 
