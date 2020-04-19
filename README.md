@@ -366,6 +366,19 @@ terraform output secret
 
 ![outputs](images/outputs.png)
 
+## Count
+
+You can manage multiple resources from same configuration using count.
+
+```hcl
+resource "digitalocean_droplet" "example" {
+  count = 5
+
+  image    = "debian-10-x64"
+  ...
+}
+```
+
 ## Provisioners
 
 Provisioners start provisioning of the resource using external tool. For example Ansible or Puppet. By default provisioners run when resource is created.
