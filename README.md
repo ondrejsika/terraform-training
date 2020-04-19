@@ -127,6 +127,40 @@ output "ip_addr" {
 }
 ```
 
+## Configuration Language
+
+- Expressions - https://www.terraform.io/docs/configuration/expressions.html
+- Built-in Functions - https://www.terraform.io/docs/configuration/functions.html
+
+### Override Files
+
+[Docs](https://www.terraform.io/docs/configuration/override.html)
+
+```hcl
+# terraform.tf
+resource "aws_instance" "web" {
+  instance_type = "t2.micro"
+  ami           = "ami-408c7f28"
+}
+```
+
+```hcl
+# override.tf
+resource "aws_instance" "web" {
+  instance_type = "t2.micro"
+  ami           = "ami-408c7f28"
+}
+```
+
+will be merged into:
+
+```hcl
+resource "aws_instance" "web" {
+  instance_type = "t2.micro"
+  ami           = "foo"
+}
+```
+
 ## Terraform CLI
 
 ### `terraform init`
@@ -437,7 +471,7 @@ terraform {
 
 ## Modules
 
-[Docs](https://www.terraform.io/docs/modules/index.html)
+[Docs](https://www.terraform.io/docs/modules/index.html) | [Configuration Docs](https://www.terraform.io/docs/configuration/modules.html)
 
 A module is a container for multiple resources that are used together. Modules can be used to create lightweight abstractions, so that you can describe your infrastructure in terms of its architecture, rather than directly in terms of physical objects.
 
