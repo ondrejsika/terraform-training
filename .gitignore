@@ -11,3 +11,6 @@
 
 # Config
 config.env.sh
+
+# Ansible
+hosts

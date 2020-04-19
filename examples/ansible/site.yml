@@ -1,0 +1,19 @@
+---
+- name: Setup Web Server
+  hosts: all
+  gather_facts: false
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx
+        update_cache: yes
+        state: present
+
+    - name: Copy index.html
+      copy:
+        src: index.html
+        dest: /var/www/html
+        owner: root
+        group: root
+        mode: 0644

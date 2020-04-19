@@ -332,6 +332,77 @@ terraform output secret
 
 ![outputs](images/outputs.png)
 
+## Provisioners
+
+Provisioners start provisioning of the resource using external tool. For example Ansible or Puppet. By default provisioners run when resource is created.
+
+There are many provisioners, see docs: https://www.terraform.io/docs/provisioners/index.html
+
+### Connections
+
+[Docs](https://www.terraform.io/docs/provisioners/connection.html)
+
+Most provisioners require access to the remote resource via SSH or WinRM, and expect a nested connection block with details about how to connect.
+
+```hcl
+connection {
+  type = "ssh"
+  user = "root"
+  host = self.ipv4_address
+}
+```
+
+### Local Exec
+
+[Docs](https://www.terraform.io/docs/provisioners/local-exec.html)
+
+Execute command on local machine
+
+```hcl
+provisioner "local-exec" {
+  command = "sh ./apply-ansible.sh ${self.ipv4_address}"
+}
+```
+
+### Remote Exec
+
+[Docs](https://www.terraform.io/docs/provisioners/remote-exec.html)
+
+Execute command on remote machine. Require `connection` block.
+
+```hcl
+provisioner "remote-exec" {
+  inline = [
+    "apt-get update",
+    "apt-get install -y nginx",
+  ]
+}
+```
+
+### File
+
+[Docs](https://www.terraform.io/docs/provisioners/file.html)
+
+Copy file from local machine to remote. Require `connection` block.
+
+```hcl
+provisioner "file" {
+  source      = "index.html"
+  destination = "/var/www/html/index.html"
+}
+```
+
+### Destroy Time Provisioners
+
+By default, provisioners are executed when resource is created. If you specify `when = destroy`, provisioner will be executed on resorce removal.
+
+```hcl
+provisioner "local-exec" {
+  when    = destroy
+  command = "sh ./backup.sh ${self.ipv4_address}"
+}
+```
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? __Let's go for a beer!__
