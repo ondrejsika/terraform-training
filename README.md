@@ -411,6 +411,30 @@ A module is a container for multiple resources that are used together. Modules c
 
 See example modules in [modules example](examples/modules)
 
+## Terraform Registry
+
+[Docs](https://www.terraform.io/docs/registry/index.html) |
+[Registry (registry.terraform.io)](https://registry.terraform.io) |
+[My Modules](https://registry.terraform.io/modules/ondrejsika)
+
+The Terraform Registry is a repository of modules written by the Terraform community. The registry can help you get started with Terraform more quickly, see examples of how Terraform is written, and find pre-made modules for infrastructure components you require.
+
+### Example: NFS server on DigitalOcean
+
+See my __terraform-module-do-nfs__ module:
+
+- Github - https://github.com/ondrejsika/terraform-module-do-nfs
+- Terraform Registry - https://registry.terraform.io/modules/ondrejsika/do-nfs
+
+```hcl
+module "nfs" {
+  source  = "ondrejsika/do-nfs/module"
+  version = "1.0.0"
+  tf_ssh_key = data.digitalocean_ssh_key.default
+}
+```
+
+Example usage here [examples/registry](examples/registry)
 
 ## Thank you! & Questions?
 
