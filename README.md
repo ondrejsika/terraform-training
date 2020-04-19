@@ -403,6 +403,15 @@ provisioner "local-exec" {
 }
 ```
 
+## Modules
+
+[Docs](https://www.terraform.io/docs/modules/index.html)
+
+A module is a container for multiple resources that are used together. Modules can be used to create lightweight abstractions, so that you can describe your infrastructure in terms of its architecture, rather than directly in terms of physical objects.
+
+See example modules in [modules example](examples/modules)
+
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? __Let's go for a beer!__
