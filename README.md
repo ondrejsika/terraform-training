@@ -436,6 +436,13 @@ module "nfs" {
 
 Example usage here [examples/registry](examples/registry)
 
+## What Next?
+
+### Hashicorp Meetups
+
+I organize Hashicorp Meetups in Prague. More information at [meetups.hashicorp.cz](https://meetups.hashicorp.cz).
+
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? __Let's go for a beer!__
