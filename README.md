@@ -449,6 +449,11 @@ I organize Hashicorp Meetups in Prague. More information at [meetups.hashicorp.c
 
 or check all my Terraform repositories on Github: [github.com/ondrejsika](https://github.com/ondrejsika?tab=repositories&q=terraform&type=&language=)
 
+More articles on my Czech website about Terraform:
+
+<https://ondrej-sika.cz/terraform/>
+
+
 ## Thank you! & Questions?
 
 That's it. Do you have any questions? __Let's go for a beer!__
