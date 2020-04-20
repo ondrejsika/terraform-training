@@ -464,6 +464,35 @@ A "backend" in Terraform determines how state is loaded and how an operation suc
 - Consul - https://www.terraform.io/docs/backends/types/consul.html
 - Postgress - https://www.terraform.io/docs/backends/types/pg.html
 
+### Postgres Backend
+
+[Docs](https://www.terraform.io/docs/backends/types/pg.html)
+
+You can store state in Postgres and let team to cooperate.
+
+You can specify connection in `.tf` file:
+
+```hcl
+terraform {
+  backend "pg" {
+    conn_str = "postgres://postgres:example@127.0.0.1:15432/postgres?sslmode=disable"
+  }
+}
+```
+
+Keep sensitive data off your Terraform files:
+
+```hcl
+terraform {
+  backend "pg" {}
+}
+```
+
+And specify connection on init:
+
+```
+terraform init -backend-config="conn_str=postgres://postgres:example@127.0.0.1:15432/postgres?sslmode=disable"
+```
 
 ### Remote Backend
 
