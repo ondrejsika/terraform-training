@@ -496,6 +496,8 @@ terraform init -backend-config="conn_str=postgres://postgres:example@127.0.0.1:1
 
 ### Remote Backend
 
+[Docs](https://www.terraform.io/docs/backends/types/remote.html)
+
 Remote backend store state and execute operations from Terraform Cloud.
 
 If you want to use Remote Backend, use this:
