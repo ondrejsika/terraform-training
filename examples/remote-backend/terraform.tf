@@ -6,6 +6,13 @@ terraform {
       name = "demo"
     }
   }
+
+  required_providers {
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+    }
+  }
+  required_version = ">= 0.13"
 }
 
 variable "base_domain" {}

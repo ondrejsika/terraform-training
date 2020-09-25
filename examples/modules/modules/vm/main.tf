@@ -8,6 +8,15 @@ variable "image" {
   default = "debian-10-x64"
 }
 
+terraform {
+  required_providers {
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
 resource "digitalocean_droplet" "default" {
   image    = var.image
   name     = var.name

@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
 provider "digitalocean" {}
 
 resource "digitalocean_ssh_key" "default" {

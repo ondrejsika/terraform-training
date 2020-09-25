@@ -3,6 +3,15 @@ variable "vm_count" {
   default = 3
 }
 
+terraform {
+  required_providers {
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+    }
+  }
+  required_version = ">= 0.13"
+}
+
 provider "digitalocean" {}
 
 data "digitalocean_ssh_key" "default" {

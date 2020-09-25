@@ -2,6 +2,13 @@ terraform {
   backend "pg" {
     conn_str = "postgres://postgres:example@127.0.0.1:15432/postgres?sslmode=disable"
   }
+
+  required_providers {
+    digitalocean = {
+      source = "digitalocean/digitalocean"
+    }
+  }
+  required_version = ">= 0.13"
 }
 
 variable "base_domain" {}
