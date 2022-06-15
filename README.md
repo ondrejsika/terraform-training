@@ -474,6 +474,33 @@ provisioner "local-exec" {
 }
 ```
 
+## Cloud Init
+
+```hcl
+resource "digitalocean_droplet" "example" {
+  ...
+  user_data = <<EOF
+#cloud-config
+ssh_pwauth: yes
+password: asdfasdf2020
+write_files:
+- path: /html/index.html
+  permissions: "0755"
+  owner: root:root
+  content: |
+    <h1>Hello from Cloud Init
+chpasswd:
+  expire: false
+runcmd:
+  - |
+    apt update
+    apt install -y curl sudo git nginx
+    curl -fsSL https://ins.oxs.cz/slu-linux-amd64.sh | sudo sh
+    cp /html/index.html /var/www/html/index.html
+EOF
+}
+```
+
 ## Backends
 
 [Docs](https://www.terraform.io/docs/backends/index.html)
