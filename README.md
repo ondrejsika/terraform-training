@@ -381,6 +381,28 @@ resource "digitalocean_droplet" "example" {
 }
 ```
 
+## For Each
+
+```hcl
+resource "digitalocean_droplet" "example" {
+  for_each = {
+    foo = {
+      image = "debian-10-x64"
+      size = "s-1vcpu-1gb"
+    }
+    bar = {
+      image = "debian-11-x64"
+      size = "s-2vcpu-2gb"
+    }
+  }
+
+  name  = each.key
+  image = each.value.image
+  size  = each.value.size
+  ...
+}
+```
+
 ## Provisioners
 
 Provisioners start provisioning of the resource using external tool. For example Ansible or Puppet. By default provisioners run when resource is created.
