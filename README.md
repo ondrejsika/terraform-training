@@ -95,9 +95,11 @@ Base `.gitignore` for Terraform projects
 
 ```gitignore
 .terraform
-*.tfstate*
+*.tfstate
 *.tfvars
+!*.EXAMPLE.tfvars
 *.tfplan
+.backup
 ```
 
 ### Simple Infrastructure Example
