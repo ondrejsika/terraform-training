@@ -368,6 +368,22 @@ terraform output secret
 
 ![outputs](images/outputs.png)
 
+## Locals
+
+```hcl
+locals {
+  image = "debian-11-x64"
+  size  = "s-1vcpu-1gb"
+}
+
+resource "digitalocean_droplet" "foo" {
+  name  = "foo"
+  image = local.image
+  size  = local.size
+  ...
+}
+```
+
 ## Count
 
 You can manage multiple resources from same configuration using count.
