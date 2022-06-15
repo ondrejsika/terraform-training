@@ -102,6 +102,14 @@ Base `.gitignore` for Terraform projects
 .backup
 ```
 
+## VSCode Format on Save
+
+```json
+"[terraform]": {
+  "editor.formatOnSave": true
+}
+```
+
 ### Simple Infrastructure Example
 
 Here is example ifrastructure described in `terraform.tf`. Components will be described later.
