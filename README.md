@@ -99,7 +99,7 @@ Base `.gitignore` for Terraform projects
 *.tfvars
 !*.EXAMPLE.tfvars
 *.tfplan
-.backup
+*.backup
 ```
 
 ## VSCode Format on Save
