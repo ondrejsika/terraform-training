@@ -537,6 +537,48 @@ EOF
 }
 ```
 
+## Lifecycle
+
+[Docs](https://www.terraform.io/language/meta-arguments/lifecycle)
+
+### Create Before Destroy
+
+```hcl
+resource "azurerm_resource_group" "example" {
+  lifecycle {
+    create_before_destroy = true
+  }
+
+  # ...
+}
+```
+
+## Prevent Destroy
+
+```hcl
+resource "aws_instance" "example" {
+  lifecycle {
+    create_before_destroy = true
+  }
+
+  # ...
+}
+```
+
+## Ignore Changes
+
+```hcl
+resource "aws_instance" "example" {
+  lifecycle {
+    ignore_changes = [
+      tags,
+    ]
+  }
+
+  # ...
+}
+```
+
 ## Backends
 
 [Docs](https://www.terraform.io/docs/backends/index.html)
