@@ -102,6 +102,18 @@ Base `.gitignore` for Terraform projects
 *.backup
 ```
 
+Generate `.gitignore` using **slu**:
+
+```
+slu file-templates gitignore --terraform
+```
+
+or
+
+```
+slu ft gi --terraform
+```
+
 ## VSCode Format on Save
 
 ```json
