@@ -675,6 +675,12 @@ module "nfs" {
 
 Example usage here [examples/registry](examples/registry)
 
+## Infracost
+
+Infracost helps engineering teams see how code changes affect their cloud costs. It scans a Terraform code and checks over 3 million prices to create a simple, understandable cost estimate before launch. Users can view helpful comments like: “This change will increase your AWS bill by 25%.”
+
+**[infracost.io](https://infracost.io)**
+
 ## What Next?
 
 ### Hashicorp Meetups
