@@ -86,6 +86,28 @@ CloudFormation is very similar tool as Terraform. CloudFormation is AWS native a
 
 Terraform create Graph of your desired resources described in manifest files, compares them with actual state (which is stored in state file or backend) and apply only changes using APIs of resource providers.
 
+## Global Configuration
+
+- Using `$HOME/.terraformrc` (on Unix)
+- Using `%APPDATA%\terraform.rc` (on Windows)
+- Using environment variables
+
+### Provider Plugin Cache
+
+<https://www.terraform.io/cli/config/config-file#provider-plugin-cache>
+
+Using `.terraformrc`
+
+```hcl
+plugin_cache_dir = "$HOME/.terraform.d/plugin-cache"
+```
+
+Using environment variables
+
+```sh
+# .bashrc or .zshrc
+export TF_PLUGIN_CACHE_DIR=$HOME/.terraform.d/plugin-cache
+```
 
 ## Build Infrastructure
 
