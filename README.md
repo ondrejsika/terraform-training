@@ -136,6 +136,12 @@ or
 slu ft gi --terraform
 ```
 
+## VSCode Terraform Plugin
+
+Official from HashiCorp
+
+<https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform>
+
 ## VSCode Format on Save
 
 ```json
