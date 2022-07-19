@@ -272,6 +272,22 @@ You can specify single output using `terraform output <output_name>`. Example:
 terraform output ip_addr
 ```
 
+### `terraform taint`
+
+Mark resource for force recreate in next apply.
+
+```sh
+terrafor taint digitalocean_droplet.example
+```
+
+### `terraform untaint`
+
+Remove taint from resource
+
+```sh
+terrafor untaint digitalocean_droplet.example
+```
+
 ### `terraform destroy`
 
 Terraform destroy destroys your ifrastructure created by Terraform.
