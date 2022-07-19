@@ -709,6 +709,11 @@ Infracost helps engineering teams see how code changes affect their cloud costs.
 
 **[infracost.io](https://infracost.io)**
 
+## Weird Terraform Providers
+
+- Spotify - <https://github.com/conradludgate/terraform-provider-spotify>
+- Dominos - <https://github.com/nat-henderson/terraform-provider-dominos>
+
 ## What Next?
 
 ### Hashicorp Meetups
