@@ -698,6 +698,15 @@ terraform {
 }
 ```
 
+## Terraform Import
+
+- https://developer.hashicorp.com/terraform/cli/import
+- https://developer.hashicorp.com/terraform/cli/commands/import
+
+```
+terraform import aws_instance.foo i-abcdefgh
+```
+
 ## Modules
 
 [Docs](https://www.terraform.io/docs/modules/index.html) | [Configuration Docs](https://www.terraform.io/docs/configuration/modules.html)
