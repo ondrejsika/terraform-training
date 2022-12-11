@@ -232,6 +232,20 @@ Download providers & setup modules. You have to call `terraform init` when you w
 terraform init
 ```
 
+### `terraform lock`
+
+Create `.terraform.lock.hcl` which will lock providers versions. This file will be used by `terraform init` to download providers.
+
+- https://developer.hashicorp.com/terraform/cli/commands/providers/lock
+
+```
+terraform providers lock \
+  -platform=darwin_arm64 \
+  -platform=darwin_amd64 \
+  -platform=linux_arm64 \
+  -platform=linux_amd64
+```
+
 ### `terraforn plan`
 
 Terraform plan creates execution plan. Compare your `.tf` manifests with actual state and determines which resources has to be created, updated or deleted.
