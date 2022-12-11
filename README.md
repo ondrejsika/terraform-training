@@ -2,34 +2,6 @@
 
 # Terraform Training
 
-## Install Terraform
-
-### Mac
-
-Using __brew__:
-
-```
-brew cask install terraform
-```
-
-### Linux
-
-Download from <https://terraform.io/downloads.html>
-
-or using [slu](https://github.com/sikalabs/slu):
-
-```
-slu install-bin terraform
-```
-
-### Windows
-
-Using __chocolatey__:
-
-```
-choco install terraform
-```
-
 ## Course
 
 ## About Me - Ondrej Sika
@@ -86,6 +58,34 @@ CloudFormation is very similar tool as Terraform. CloudFormation is AWS native a
 ## How Terraform Works
 
 Terraform create Graph of your desired resources described in manifest files, compares them with actual state (which is stored in state file or backend) and apply only changes using APIs of resource providers.
+
+## Install Terraform
+
+### Mac
+
+Using __brew__:
+
+```
+brew cask install terraform
+```
+
+### Linux
+
+Download from <https://terraform.io/downloads.html>
+
+or using [slu](https://github.com/sikalabs/slu):
+
+```
+slu install-bin terraform
+```
+
+### Windows
+
+Using __chocolatey__:
+
+```
+choco install terraform
+```
 
 ## Global Configuration
 
