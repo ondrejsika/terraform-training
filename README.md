@@ -36,6 +36,12 @@ Terraform is a tool for building, changing, and versioning infrastructure safely
 
 Configuration files describe to Terraform the components needed to run a single application or your entire datacenter. Terraform generates an execution plan describing what it will do to reach the desired state, and then executes it to build the described infrastructure. As the configuration changes, Terraform is able to determine what changed and create incremental execution plans which can be applied. [more at the Terraform website](https://www.terraform.io/intro/index.html)
 
+## DevOps Kniha (Czech only)
+
+[![](./images/devops_kniha.jpg)](https://kniha.sika.io)
+
+<https://kniha.sika.io>
+
 ## Why Terraform
 
 - Infrastructure as Code
