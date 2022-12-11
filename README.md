@@ -802,6 +802,12 @@ tflint
 tflint --module
 ```
 
+## Terradozer
+
+Terradozer is a tool to destroy all resources using only Terraform state.
+
+<https://github.com/jckuester/terradozer>
+
 ## Weird Terraform Providers
 
 - Spotify - <https://github.com/conradludgate/terraform-provider-spotify>
