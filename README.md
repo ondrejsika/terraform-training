@@ -371,7 +371,7 @@ Variable can be set in `.tfvars` file:
 do_token = "xxx"
 ```
 
-or in environment variable `TF_VAR_do_token`
+or in environment variable `TF_VAR_do_token`. **This is case sensitive.**
 
 or using comand line argument `-var=do_token=xxx`
 
