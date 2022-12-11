@@ -746,6 +746,48 @@ Infracost helps engineering teams see how code changes affect their cloud costs.
 
 **[infracost.io](https://infracost.io)**
 
+## tflint
+
+- https://github.com/terraform-linters/tflint
+
+### Install tflint
+
+Bash script (Linux):
+
+```
+curl -s https://raw.githubusercontent.com/terraform-linters/tflint/master/install_linux.sh | bash
+```
+
+or using `slu`:
+
+```
+slu install-bin tflint
+```
+
+Homebrew (macOS):
+
+```
+brew install tflint
+```
+
+Chocolatey (Windows):
+
+```
+choco install tflint
+```
+
+### Example
+
+Run `tflint` in your Terraform workspace directory
+
+```
+tflint
+```
+
+```
+tflint --module
+```
+
 ## Weird Terraform Providers
 
 - Spotify - <https://github.com/conradludgate/terraform-provider-spotify>
