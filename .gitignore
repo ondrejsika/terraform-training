@@ -8,6 +8,7 @@
 *.tfvars
 *.tfplan
 !*-example.tfvars
+.infracost
 
 # Config
 config.env.sh
