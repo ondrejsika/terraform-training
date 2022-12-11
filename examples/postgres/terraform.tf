@@ -29,6 +29,6 @@ resource "digitalocean_database_cluster" "postgres" {
 }
 
 output "uri" {
-  value = digitalocean_database_cluster.postgres.uri
+  value     = digitalocean_database_cluster.postgres.uri
   sensitive = true
 }

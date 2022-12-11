@@ -25,10 +25,10 @@ data "digitalocean_domain" "default" {
 resource "digitalocean_droplet" "example" {
   count = var.vm_count
 
-  image    = "debian-10-x64"
-  name     = "example${count.index}"
-  region   = "fra1"
-  size     = "s-1vcpu-1gb"
+  image  = "debian-10-x64"
+  name   = "example${count.index}"
+  region = "fra1"
+  size   = "s-1vcpu-1gb"
   ssh_keys = [
     data.digitalocean_ssh_key.default.fingerprint
   ]
@@ -45,6 +45,6 @@ resource "digitalocean_record" "example" {
 
 output "domains" {
   value = [
-    for instance in digitalocean_record.example: instance.fqdn
+    for instance in digitalocean_record.example : instance.fqdn
   ]
 }

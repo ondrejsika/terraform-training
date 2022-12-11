@@ -3,6 +3,6 @@ output "message" {
 }
 
 output "secret" {
-  value = "Sensitive Output"
+  value     = "Sensitive Output"
   sensitive = true
 }

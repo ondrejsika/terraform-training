@@ -18,10 +18,10 @@ terraform {
 }
 
 resource "digitalocean_droplet" "default" {
-  image    = var.image
-  name     = var.name
-  region   = "fra1"
-  size     = var.size
+  image  = var.image
+  name   = var.name
+  region = "fra1"
+  size   = var.size
   ssh_keys = [
     var.tf_ssh_key.fingerprint
   ]

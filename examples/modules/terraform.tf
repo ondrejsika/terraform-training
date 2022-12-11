@@ -21,17 +21,17 @@ data "digitalocean_domain" "default" {
 }
 
 module "foo" {
-  source = "./modules/vm"
+  source     = "./modules/vm"
   tf_ssh_key = data.digitalocean_ssh_key.default
-  tf_domain = data.digitalocean_domain.default
-  name = "foo"
+  tf_domain  = data.digitalocean_domain.default
+  name       = "foo"
 }
 
 module "bar" {
-  source = "./modules/vm"
+  source     = "./modules/vm"
   tf_ssh_key = data.digitalocean_ssh_key.default
-  tf_domain = data.digitalocean_domain.default
-  name = "bar"
+  tf_domain  = data.digitalocean_domain.default
+  name       = "bar"
 }
 
 output "foo_ip_addr" {
