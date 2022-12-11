@@ -303,7 +303,7 @@ terraform output ip_addr
 Mark resource for force recreate in next apply.
 
 ```sh
-terrafor taint digitalocean_droplet.example
+terraform taint digitalocean_droplet.example
 ```
 
 ### `terraform untaint`
@@ -311,7 +311,7 @@ terrafor taint digitalocean_droplet.example
 Remove taint from resource
 
 ```sh
-terrafor untaint digitalocean_droplet.example
+terraform untaint digitalocean_droplet.example
 ```
 
 ### `terraform destroy`
