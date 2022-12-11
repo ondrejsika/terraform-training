@@ -212,6 +212,18 @@ resource "aws_instance" "web" {
 
 ## Terraform CLI
 
+### My Bash/ZSH Aliases
+
+```sh
+alias tf=terraform
+alias tfi="terraform init"
+alias tfa="terraform apply"
+alias tfd="terraform destroy"
+alias tfp="terraform plan"
+alias tfs="terraform show"
+alias tfo="terraform output"
+```
+
 ### `terraform init`
 
 Download providers & setup modules. You have to call `terraform init` when you want to add or update providers and modules.
