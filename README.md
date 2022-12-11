@@ -16,6 +16,12 @@ brew cask install terraform
 
 Download from <https://terraform.io/downloads.html>
 
+or using [slu](https://github.com/sikalabs/slu):
+
+```
+slu install-bin terraform
+```
+
 ### Windows
 
 Using __chocolatey__:
