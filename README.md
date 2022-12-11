@@ -458,6 +458,24 @@ terraform output secret
 
 ![outputs](images/outputs.png)
 
+## Mark as Sensitive or Not Sensitive
+
+- `sensitive` - Mark data as sensitive.
+- `nonsensitive` - Mark sensitive data as not sensitive.
+
+```hcl
+resource "random_password" "foo" {
+  length  = 16
+  special = false
+}
+
+output "foo" {
+  value = nonsensitive(random_password.foo.result)
+}
+```
+
+See full example [examples/sensitive](./examples/sensitive)
+
 ## Locals
 
 ```hcl
