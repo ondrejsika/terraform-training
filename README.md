@@ -210,6 +210,16 @@ resource "aws_instance" "web" {
 }
 ```
 
+## Terraform Environment Variables
+
+### `TF_CLI_ARGS`
+
+<https://developer.hashicorp.com/terraform/cli/config/environment-variables#tf_cli_args-and-tf_cli_args_name>
+
+```sh
+export TF_CLI_ARGS=-refresh=false
+```
+
 ## Terraform CLI
 
 ### My Bash/ZSH Aliases
