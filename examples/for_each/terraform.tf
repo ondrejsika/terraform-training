@@ -33,7 +33,7 @@ locals {
 }
 
 resource "digitalocean_droplet" "example" {
-  for_each = locals.vms
+  for_each = local.vms
 
   image  = each.value.image
   name   = "example-${each.key}"
@@ -45,7 +45,7 @@ resource "digitalocean_droplet" "example" {
 }
 
 resource "digitalocean_record" "example" {
-  for_each = locals.vms
+  for_each = local.vms
 
 
   domain = data.digitalocean_domain.default.name
