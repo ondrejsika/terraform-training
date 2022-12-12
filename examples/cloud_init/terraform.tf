@@ -25,14 +25,14 @@ resource "digitalocean_droplet" "example" {
 #cloud-config
 ssh_pwauth: yes
 password: asdfasdf2020
+chpasswd:
+  expire: false
 write_files:
 - path: /html/index.html
   permissions: "0755"
   owner: root:root
   content: |
     <h1>Hello from Cloud Init
-chpasswd:
-  expire: false
 runcmd:
   - |
     apt update
