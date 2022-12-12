@@ -44,7 +44,5 @@ resource "digitalocean_record" "example" {
 }
 
 output "domains" {
-  value = [
-    for instance in digitalocean_record.example : instance.fqdn
-  ]
+  value = digitalocean_record.example.*.fqdn
 }
