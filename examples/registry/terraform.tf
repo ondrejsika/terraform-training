@@ -20,9 +20,11 @@ data "digitalocean_domain" "default" {
 }
 
 module "nfs" {
-  source     = "ondrejsika/do-nfs/module"
-  version    = "1.1.0"
-  tf_ssh_key = data.digitalocean_ssh_key.default
+  source  = "ondrejsika/do-nfs/module"
+  version = "2.0.0"
+  ssh_keys = [
+    data.digitalocean_ssh_key.default.id,
+  ]
 }
 
 resource "digitalocean_record" "nfs" {
