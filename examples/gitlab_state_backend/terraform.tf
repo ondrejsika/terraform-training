@@ -30,6 +30,6 @@ resource "digitalocean_record" "foo" {
 resource "digitalocean_record" "bar" {
   domain = data.digitalocean_domain.default.name
   type   = "CNAME"
-  name   = "gitlab-state-backend-foo"
+  name   = "gitlab-state-backend-bar"
   value  = "example.com."
 }
