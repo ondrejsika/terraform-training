@@ -545,6 +545,22 @@ resource "digitalocean_droplet" "example" {
 }
 ```
 
+## Conditions (if)
+
+There is no `if` or another condition implementation in Terraform. You can use `count` workaround to achieve this.
+
+```hcl
+locals {
+  enable = true
+}
+
+resource "digitalocean_record" "example" {
+  count = local.enable ? 1 : 0
+
+  ...
+}
+```
+
 ## Provisioners
 
 Provisioners start provisioning of the resource using external tool. For example Ansible or Puppet. By default provisioners run when resource is created.
