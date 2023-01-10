@@ -12,6 +12,7 @@
 !*-example.tfvars
 !*.EXAMPLE.tfvars
 .infracost
+*.tgz
 
 # Config
 config.env.sh
