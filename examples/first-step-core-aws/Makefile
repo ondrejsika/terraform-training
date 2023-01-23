@@ -1,0 +1,2 @@
+infracost:
+	infracost breakdown --path .
