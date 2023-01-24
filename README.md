@@ -901,6 +901,12 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Training Sessions
 
+#### 2023-01-24 ZooControl
+
+- Example Terraform Infrastructure Monorepo - https://github.com/sika-training-examples/2023-01-24--zoocontrol--terraform--example-monorepo
+- Step by Steps - https://github.com/sika-training-examples/2023-01-24--zoocontrol--terraform--basic-steps
+- Gitlab Variables in Terraform - https://github.com/sika-training-examples/2023-01-24--zoocontrol--terraform-gitlab-variables-in-terraform
+
 #### 2023-01-10 TTC
 
 - Example Terraform Infrastructure Monorepo - https://github.com/sika-training-examples/2023-01-10-ttc-terraform-example-project
