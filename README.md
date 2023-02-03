@@ -243,6 +243,21 @@ alias tfs="terraform show"
 alias tfo="terraform output"
 ```
 
+### PowerShell Aliases
+
+```powershell
+Set-Alias -Name tf -Value terraform
+```
+
+```powershell
+Set-Alias -Name tfi -Value "terraform init"
+Set-Alias -Name tfa -Value "terraform apply"
+Set-Alias -Name tfd -Value "terraform destroy"
+Set-Alias -Name tfp -Value "terraform plan"
+Set-Alias -Name tfs -Value "terraform show"
+Set-Alias -Name tfo -Value "terraform output"
+```
+
 ### `terraform init`
 
 Download providers & setup modules. You have to call `terraform init` when you want to add or update providers and modules.
