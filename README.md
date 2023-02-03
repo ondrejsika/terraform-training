@@ -62,6 +62,14 @@ Configuration management tools install and manage software on a machine that alr
 
 CloudFormation is very similar tool as Terraform. CloudFormation is AWS native and you're not able to mange any non-AWS resources using CloufFormation. For example, you have AWS for computing, but you have Cloudflare DNS and few servers on GCP or Digital Ocean. You can't use CloudFormation to manage all those resources in one graph, but you can use Terraform to do that.
 
+### Terraform vs Pulumi
+
+- <https://pulumi.com>
+
+Pulumi and Terraform differ in that Terraform requires the use of a domain-specific language: HashiCorp Configuration Language (HCL). In contrast, Pulumi allows you to use familiar general purpose languages like Python, TypeScript, JavaScript, Go, .NET, Java, and markup languages like YAML.
+
+-- <https://www.pulumi.com/docs/intro/vs/terraform/#differences>
+
 ## How Terraform Works
 
 Terraform create Graph of your desired resources described in manifest files, compares them with actual state (which is stored in state file or backend) and apply only changes using APIs of resource providers.
