@@ -130,6 +130,7 @@ Base `.gitignore` for Terraform projects
 !*.EXAMPLE.tfvars
 *.tfplan
 *.backup
+override.tf
 ```
 
 Generate `.gitignore` using **slu**:
