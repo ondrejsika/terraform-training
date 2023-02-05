@@ -361,10 +361,10 @@ provider "digitalocean" {}
 ### Terraform Variable Configuration
 
 ```hcl
-variable "do_token" {}
+variable "digitalocean_token" {}
 
 provider "digitalocean" {
-  token = var.do_token
+  token = var.digitalocean_token
 }
 ```
 
@@ -372,12 +372,12 @@ Variable can be set in `.tfvars` file:
 
 ```hcl
 # terraform.tfvars
-do_token = "xxx"
+digitalocean_token = "xxx"
 ```
 
-or in environment variable `TF_VAR_do_token`. **This is case sensitive.**
+or in environment variable `TF_VAR_digitalocean_token`. **This is case sensitive.**
 
-or using comand line argument `-var=do_token=xxx`
+or using comand line argument `-var=digitalocean_token=xxx`
 
 More about input variables: https://www.terraform.io/docs/configuration/variables.html
 
