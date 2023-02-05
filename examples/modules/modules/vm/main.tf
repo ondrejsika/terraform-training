@@ -5,7 +5,7 @@ variable "size" {
   default = "s-1vcpu-1gb"
 }
 variable "image" {
-  default = "debian-10-x64"
+  default = "debian-11-x64"
 }
 
 terraform {

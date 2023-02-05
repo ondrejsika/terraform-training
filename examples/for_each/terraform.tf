@@ -22,11 +22,11 @@ data "digitalocean_domain" "default" {
 locals {
   vms = {
     foo = {
-      image = "debian-10-x64"
+      image = "debian-11-x64"
       size  = "s-1vcpu-1gb"
     }
     bar = {
-      image = "debian-10-x64"
+      image = "debian-11-x64"
       size  = "s-1vcpu-1gb"
     }
   }

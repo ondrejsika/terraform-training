@@ -20,7 +20,7 @@ data "digitalocean_domain" "default" {
 }
 
 resource "digitalocean_droplet" "example" {
-  image  = "debian-10-x64"
+  image  = "debian-11-x64"
   name   = "example"
   region = "fra1"
   size   = "s-1vcpu-1gb"
