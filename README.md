@@ -432,7 +432,6 @@ resource "digitalocean_droplet" "example" {
   region   = "fra1"
   size     = "s-1vcpu-1gb"
   ssh_keys = [
-    # here
     data.digitalocean_ssh_key.default.fingerprint
   ]
 }
