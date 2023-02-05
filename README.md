@@ -925,7 +925,7 @@ More articles on my Czech website about Terraform:
 
 ## Thank you! & Questions?
 
-That's it. Do you have any questions? __Let's go for a beer!__
+That's it. Do you have any questions? __Let's go for a beer!__ or [schedule a beer](https://calendly.com/ondrejsika/beer)
 
 ### Ondrej Sika
 
