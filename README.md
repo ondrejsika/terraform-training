@@ -556,6 +556,20 @@ resource "digitalocean_record" "example" {
 }
 ```
 
+## Random Provider
+
+- https://registry.terraform.io/providers/hashicorp/random/latest/docs
+
+```hcl
+resource "random_password" "password" {
+  length           = 16
+  special          = true
+  override_special = "_"
+}
+```
+
+Example [./examples/random](./examples/random)
+
 ## Provisioners
 
 Provisioners start provisioning of the resource using external tool. For example Ansible or Puppet. By default provisioners run when resource is created.
