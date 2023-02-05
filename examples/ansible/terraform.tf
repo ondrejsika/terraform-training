@@ -29,7 +29,7 @@ resource "digitalocean_droplet" "example" {
   ]
 
   provisioner "local-exec" {
-    command = "sh ansible-apply.sh ${self.ipv4_address}"
+    command = "sleep 10 && make ansible HOST=${self.ipv4_address}"
   }
 }
 
