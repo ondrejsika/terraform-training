@@ -629,6 +629,9 @@ provisioner "local-exec" {
 
 ## Cloud Init
 
+- DevOps Live (recording) - https://www.youtube.com/watch?v=hSyBBLWRXLs
+- DevOps Live (repo with examples) - https://github.com/ondrejsika/devopslive/tree/master/2021-01-21_cloud_init
+
 ```hcl
 resource "digitalocean_droplet" "example" {
   ...
