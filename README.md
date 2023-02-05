@@ -199,34 +199,6 @@ output "ip_addr" {
 - Expressions - https://www.terraform.io/docs/configuration/expressions.html
 - Built-in Functions - https://www.terraform.io/docs/configuration/functions.html
 
-### Override Files
-
-[Docs](https://www.terraform.io/docs/configuration/override.html)
-
-```hcl
-# terraform.tf
-resource "aws_instance" "web" {
-  instance_type = "t2.micro"
-  ami           = "ami-408c7f28"
-}
-```
-
-```hcl
-# override.tf
-resource "aws_instance" "web" {
-  ami = "foo"
-}
-```
-
-will be merged into:
-
-```hcl
-resource "aws_instance" "web" {
-  instance_type = "t2.micro"
-  ami           = "foo"
-}
-```
-
 ## Terraform Environment Variables
 
 ### `TF_CLI_ARGS`
@@ -829,6 +801,34 @@ module "nfs" {
 ```
 
 Example usage here [examples/registry](examples/registry)
+
+## Override Files
+
+[Docs](https://www.terraform.io/docs/configuration/override.html)
+
+```hcl
+# terraform.tf
+resource "aws_instance" "web" {
+  instance_type = "t2.micro"
+  ami           = "ami-408c7f28"
+}
+```
+
+```hcl
+# override.tf
+resource "aws_instance" "web" {
+  ami = "foo"
+}
+```
+
+will be merged into:
+
+```hcl
+resource "aws_instance" "web" {
+  instance_type = "t2.micro"
+  ami           = "foo"
+}
+```
 
 ## Infracost
 
