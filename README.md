@@ -894,6 +894,14 @@ tflint
 tflint --module
 ```
 
+## !! Cleanup Digitalocean Account After Training !!
+
+Delete everything from Digitalocean account after training.
+
+```
+make cleanup-digitalocean-account-after-training
+```
+
 ## Terradozer
 
 Terradozer is a tool to destroy all resources using only Terraform state.
@@ -921,7 +929,6 @@ or check all my Terraform repositories on Github: [github.com/ondrejsika](https:
 More articles on my Czech website about Terraform:
 
 <https://ondrej-sika.cz/terraform/>
-
 
 ## Thank you! & Questions?
 
