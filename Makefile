@@ -25,3 +25,9 @@ examples-terraform-providers-lock:
 				-platform=darwin_amd64 \
 				-platform=linux_arm64 \
 				-platform=linux_amd64 \;
+
+cleanup-digitalocean-account-after-training:
+ifndef DIGITALOCEAN_TOKEN
+	$(error DIGITALOCEAN_TOKEN is undefined)
+endif
+	slu digitalocean all delete
