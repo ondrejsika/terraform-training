@@ -10,6 +10,10 @@ terraform {
 
 provider "digitalocean" {}
 
+locals {
+  vm_count = 2
+}
+
 data "digitalocean_ssh_key" "default" {
   name = "default"
 }
@@ -19,6 +23,8 @@ data "digitalocean_domain" "default" {
 }
 
 resource "digitalocean_droplet" "example" {
+  count = local.vm_count
+
   image  = "debian-11-x64"
   name   = "example"
   region = "fra1"
@@ -29,22 +35,28 @@ resource "digitalocean_droplet" "example" {
 }
 
 resource "digitalocean_record" "example" {
+  count = local.vm_count
+
   domain = data.digitalocean_domain.default.name
   type   = "A"
-  name   = digitalocean_droplet.example.name
-  value  = digitalocean_droplet.example.ipv4_address
+  name   = digitalocean_droplet.example[count.index].name
+  value  = digitalocean_droplet.example[count.index].ipv4_address
 }
 
 output "ansible-hosts" {
   value = {
     "all" : {
       "hosts" : [
-        digitalocean_droplet.example.ipv4_address,
-      ],
+        for vm in digitalocean_droplet.example :
+        vm.ipv4_address
+      ]
     }
   }
 }
 
-output "domain" {
-  value = digitalocean_record.example.fqdn
+output "domains" {
+  value = [
+    for record in digitalocean_record.example :
+    record.fqdn
+  ]
 }
