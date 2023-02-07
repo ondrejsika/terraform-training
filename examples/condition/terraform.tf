@@ -11,10 +11,6 @@ terraform {
 
 provider "digitalocean" {}
 
-data "digitalocean_ssh_key" "default" {
-  name = "default"
-}
-
 data "digitalocean_domain" "default" {
   name = var.base_domain
 }
