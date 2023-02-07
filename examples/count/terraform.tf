@@ -44,5 +44,15 @@ resource "digitalocean_record" "example" {
 }
 
 output "domains" {
-  value = digitalocean_record.example.*.fqdn
+  value = [
+    for droplet in digitalocean_record.example :
+    droplet.fqdn
+  ]
+}
+
+output "domains_map" {
+  value = {
+    for droplet in digitalocean_record.example :
+    droplet.name => droplet.fqdn
+  }
 }
