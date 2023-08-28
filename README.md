@@ -726,6 +726,40 @@ A "backend" in Terraform determines how state is loaded and how an operation suc
 - Consul - https://www.terraform.io/docs/backends/types/consul.html
 - Postgress - https://www.terraform.io/docs/backends/types/pg.html
 
+### Azure Backend
+
+You can specify config in `.tf` file:
+
+```tf
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "tfstate"
+    storage_account_name = "tfstate8637959853"
+    container_name       = "tfstate"
+    key                  = "terraform.tfstate"
+    # -backend-config="resource_group_name=storage-account-example" -backend-config="storage_account_name=example8637959853" -backend-config="container_name=example" -backend-config="key=terraform.tfstate"
+  }
+}
+```
+
+Or you can define backend and setup via `-backend-config` parameter in `terraform init`.
+
+```tf
+terraform {
+  backend "azurerm" {}
+}
+```
+
+and
+
+```bash
+terraform init \
+  -backend-config="resource_group_name=tfstate" \
+  -backend-config="storage_account_name=tfstate8637959853" \
+  -backend-config="container_name=tfstate" \
+  -backend-config="key=terraform.tfstate"
+```
+
 ### Postgres Backend
 
 [Docs](https://www.terraform.io/docs/backends/types/pg.html)
