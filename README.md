@@ -96,6 +96,12 @@ slu install-bin terraform
 
 ### Windows
 
+Using __winget__:
+
+```
+winget install -e --id Hashicorp.Terraform
+```
+
 Using __chocolatey__:
 
 ```
