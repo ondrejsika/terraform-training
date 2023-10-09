@@ -1029,6 +1029,10 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Training Sessions
 
+#### 2023-10-09 Tieto
+
+- Repo from the training - https://github.com/sika-training-examples/2023-10-09-terraform-example-project-tieto
+
 #### 2023-02-06 CRA
 
 - Example Terraform Infrastructure Monorepo - https://github.com/sika-training-examples/2023-02-06--terrafrom--demo
