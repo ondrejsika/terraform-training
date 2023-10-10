@@ -143,6 +143,7 @@ Base `.gitignore` for Terraform projects
 *.tfvars
 !*.EXAMPLE.tfvars
 *.tfplan
+.terraform.tfstate.lock.info
 *.backup
 override.tf
 ```
