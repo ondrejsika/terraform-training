@@ -516,6 +516,10 @@ resource "digitalocean_droplet" "foo" {
 }
 ```
 
+## Functions
+
+[Docs](https://developer.hashicorp.com/terraform/language/functions)
+
 ## Count
 
 You can manage multiple resources from same configuration using count.
