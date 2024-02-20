@@ -524,6 +524,14 @@ resource "digitalocean_droplet" "foo" {
 
 [Docs](https://developer.hashicorp.com/terraform/language/functions)
 
+## Terraform Console
+
+Run interactive Terraform console using:
+
+```
+terraform console
+```
+
 ### Regex Example
 
 [source](./examples/regex)
@@ -532,6 +540,12 @@ resource "digitalocean_droplet" "foo" {
 output "example" {
   value = join("", regexall("[a-z0-9]+", lower("Random Name-01")))
 }
+```
+
+or try in console
+
+```
+join("", regexall("[a-z0-9]+", lower("Random Name-01")))
 ```
 
 ## Count
