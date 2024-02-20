@@ -730,6 +730,15 @@ resource "aws_instance" "example" {
 }
 ```
 
+## Terraform State
+
+Use `terraform state ...` for state management.
+
+- `terraform state list` - list all resources in state
+- `terraform state show <resource_name>` - show state of resource
+- `terraform state rm <resource_name>` - remove resource from state
+- `terraform state mv <resource_name> <new_resource_name>` - rename resource in state
+
 ## Backends
 
 [Docs](https://www.terraform.io/docs/backends/index.html)
