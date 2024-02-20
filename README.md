@@ -1053,6 +1053,12 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Training Sessions
 
+#### 2024-02-20 Root.cz
+
+- Step by step examples - https://github.com/sika-training-examples/2024-02-20-terraform-step-by-step-example
+- Example project monorepo - https://github.com/sika-training-examples/2024-02-20-terraform-project-example
+- Example VM Module - https://github.com/sika-training-examples/2024-02-20-terraform-module-vm-example
+
 #### 2023-10-09 Tieto
 
 - Repo from the training - https://github.com/sika-training-examples/2023-10-09-terraform-example-project-tieto
