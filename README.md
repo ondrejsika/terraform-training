@@ -70,6 +70,10 @@ Pulumi and Terraform differ in that Terraform requires the use of a domain-speci
 
 -- <https://www.pulumi.com/docs/intro/vs/terraform/#differences>
 
+### Terraform vs OpenTofu
+
+On the technical level, OpenTofu 1.6.x is very similar feature-wise to Terraform 1.6.x. In the future, the projects feature sets will diverge. The other main difference is that OpenTofu is open-source, and it's goal is to be driven in a collaborative way with no single company being able to dictate the roadmap. -- [opentofu.org](https://opentofu.org)
+
 ## How Terraform Works
 
 Terraform create Graph of your desired resources described in manifest files, compares them with actual state (which is stored in state file or backend) and apply only changes using APIs of resource providers.
