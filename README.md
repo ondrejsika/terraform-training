@@ -520,6 +520,16 @@ resource "digitalocean_droplet" "foo" {
 
 [Docs](https://developer.hashicorp.com/terraform/language/functions)
 
+### Regex Example
+
+[source](./examples/regex)
+
+```hcl
+output "example" {
+  value = join("", regexall("[a-z0-9]+", lower("Random Name-01")))
+}
+```
+
 ## Count
 
 You can manage multiple resources from same configuration using count.
