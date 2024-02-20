@@ -146,6 +146,10 @@ Base `.gitignore` for Terraform projects
 .terraform.tfstate.lock.info
 *.backup
 override.tf
+
+# Infracost
+.infracost
+.infracost-reports
 ```
 
 Generate `.gitignore` using **slu**:
