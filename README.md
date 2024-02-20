@@ -995,6 +995,10 @@ tflint
 tflint --module
 ```
 
+```
+tflint --recursive
+```
+
 ## !! Cleanup Digitalocean Account After Training !!
 
 Delete everything from Digitalocean account after training.
