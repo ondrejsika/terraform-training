@@ -195,7 +195,7 @@ resource "digitalocean_ssh_key" "default" {
 }
 
 resource "digitalocean_droplet" "example" {
-  image    = "debian-11-x64"
+  image    = "debian-12-x64"
   name     = "example"
   region   = "fra1"
   size     = "s-1vcpu-1gb"
@@ -412,7 +412,7 @@ resource "digitalocean_ssh_key" "default" {
 }
 
 resource "digitalocean_droplet" "example" {
-  image    = "debian-11-x64"
+  image    = "debian-12-x64"
   name     = "example"
   region   = "fra1"
   size     = "s-1vcpu-1gb"
@@ -442,7 +442,7 @@ data "digitalocean_ssh_key" "default" {
 }
 
 resource "digitalocean_droplet" "example" {
-  image    = "debian-11-x64"
+  image    = "debian-12-x64"
   name     = "example"
   region   = "fra1"
   size     = "s-1vcpu-1gb"
@@ -508,7 +508,7 @@ See full example [examples/sensitive](./examples/sensitive)
 
 ```hcl
 locals {
-  image = "debian-11-x64"
+  image = "debian-12-x64"
   size  = "s-1vcpu-1gb"
 }
 
@@ -571,7 +571,7 @@ You can manage multiple resources from same configuration using count.
 resource "digitalocean_droplet" "example" {
   count = 5
 
-  image    = "debian-11-x64"
+  image    = "debian-12-x64"
   ...
 }
 ```
@@ -582,11 +582,11 @@ resource "digitalocean_droplet" "example" {
 resource "digitalocean_droplet" "example" {
   for_each = {
     foo = {
-      image = "debian-11-x64"
+      image = "debian-12-x64"
       size = "s-1vcpu-1gb"
     }
     bar = {
-      image = "debian-11-x64"
+      image = "debian-12-x64"
       size = "s-2vcpu-2gb"
     }
   }

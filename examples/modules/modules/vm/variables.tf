@@ -18,7 +18,7 @@ variable "size" {
 
 variable "image" {
   type    = string
-  default = "debian-11-x64"
+  default = "debian-12-x64"
 }
 
 variable "region" {

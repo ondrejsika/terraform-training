@@ -28,7 +28,7 @@ data "digitalocean_domain" "default" {
 resource "digitalocean_droplet" "example" {
   for_each = var.vms
 
-  image  = "debian-11-x64"
+  image  = "debian-12-x64"
   name   = "example${each.key}"
   region = "fra1"
   size   = "s-1vcpu-1gb"
