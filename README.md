@@ -532,6 +532,21 @@ Run interactive Terraform console using:
 terraform console
 ```
 
+### File
+
+Read file
+
+```hcl
+file("~/.ssh/id_rsa.pub")
+```
+
+```hcl
+resource "digitalocean_ssh_key" "default" {
+  name       = "default"
+  public_key = file("./ssh-keys/id_rsa.pub")
+}
+```
+
 ### Regex Example
 
 [source](./examples/regex)
