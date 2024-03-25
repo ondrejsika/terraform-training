@@ -776,10 +776,15 @@ A "backend" in Terraform determines how state is loaded and how an operation suc
 
 ### Backend Types
 
-- HTTP - https://developer.hashicorp.com/terraform/language/settings/backends/http
-- S3 - https://www.terraform.io/docs/backends/types/s3.html
-- Etcd - https://www.terraform.io/docs/backends/types/etcd.html
-- Consul - https://www.terraform.io/docs/backends/types/consul.html
+Most common backends
+
+- HTTP (used for Gitlab) - https://developer.hashicorp.com/terraform/language/settings/backends/http
+- AWS S3 - https://www.terraform.io/docs/backends/types/s3.html
+- Azure - https://www.terraform.io/docs/backends/types/azurerm.html
+
+Another backends
+
+- Kubernetes - https://www.terraform.io/docs/backends/types/kubernetes.html
 - Postgress - https://www.terraform.io/docs/backends/types/pg.html
 
 ### Gitlab Backend (HTTP)
