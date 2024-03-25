@@ -191,7 +191,7 @@ provider "digitalocean" {}
 
 resource "digitalocean_ssh_key" "default" {
   name       = "default"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHtI4BsjxWHmRB3EzyQDSX5idgyjD67XL4WmIjz+pcG6"
 }
 
 resource "digitalocean_droplet" "example" {
@@ -408,7 +408,7 @@ Examples:
 ```hcl
 resource "digitalocean_ssh_key" "default" {
   name       = "default"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = file("./ssh-keys/id_rsa.pub")
 }
 
 resource "digitalocean_droplet" "example" {
