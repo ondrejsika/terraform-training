@@ -60,7 +60,7 @@ Configuration management tools install and manage software on a machine that alr
 
 ### Terraform vs. CloudFormation
 
-CloudFormation is very similar tool as Terraform. CloudFormation is AWS native and you're not able to mange any non-AWS resources using CloufFormation. For example, you have AWS for computing, but you have Cloudflare DNS and few servers on GCP or Digital Ocean. You can't use CloudFormation to manage all those resources in one graph, but you can use Terraform to do that.
+CloudFormation is very similar tool as Terraform. CloudFormation is AWS native and you're not able to manage any non-AWS resources using CloufFormation. For example, you have AWS for computing, but you have Cloudflare DNS and few servers on GCP or Digital Ocean. You can't use CloudFormation to manage all those resources in one graph, but you can use Terraform to do that.
 
 ### Terraform vs Pulumi
 
