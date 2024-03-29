@@ -604,13 +604,22 @@ There is no `if` or another condition implementation in Terraform. You can use `
 
 ```hcl
 locals {
-  enable = true
+  enable = false
 }
 
-resource "digitalocean_record" "example" {
+resource "random_password" "foo" {
   count = local.enable ? 1 : 0
 
-  ...
+  length  = 10
+  special = false
+}
+
+locals {
+  random_password_foo_result = length(random_password.foo) == 1 ? random_password.foo[0].result : sensitive("---")
+}
+
+output "foo" {
+  value = nonsensitive(local.random_password_foo_result)
 }
 ```
 
