@@ -801,7 +801,7 @@ terraform {
 
 ```Makefile
 # Makefile
-STATE_NAME = main
+STATE_NAME = default
 
 terraform-state-init:
 ifndef GITLAB_DOMAIN
@@ -1041,9 +1041,6 @@ Here is my example of `.gitlab-ci.yml` for Terraform. It use [terraform.gitlab-c
 # .gitlab-ci.yml
 
 include: https://raw.githubusercontent.com/ondrejsika/gitlab-ci-training/master/examples/library/terraform/terraform.gitlab-ci.yml
-
-variables:
-  TF_ADDRESS: ${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/terraform/state/main
 ```
 
 ## !! Cleanup Digitalocean Account After Training !!
