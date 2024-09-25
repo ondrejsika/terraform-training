@@ -230,6 +230,9 @@ export TF_CLI_ARGS=-refresh=false
 
 ```sh
 alias tf=terraform
+```
+
+```sh
 alias tfi="terraform init"
 alias tfa="terraform apply"
 alias tfd="terraform destroy"
