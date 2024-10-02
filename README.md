@@ -1055,6 +1055,37 @@ Here is my example of `.gitlab-ci.yml` for Terraform. It use [terraform.gitlab-c
 include: https://raw.githubusercontent.com/ondrejsika/gitlab-ci-training/master/examples/library/terraform/terraform.gitlab-ci.yml
 ```
 
+## terraform-provider-restapi
+
+- https://github.com/Mastercard/terraform-provider-restapi
+- https://registry.terraform.io/providers/Mastercard/restapi/latest/docs
+- [examples/restapi](examples/restapi)
+
+```hcl
+terraform {
+  required_providers {
+    restapi = {
+      source  = "Mastercard/restapi"
+      version = "1.20.0"
+    }
+  }
+}
+
+provider "restapi" {
+  uri = data.vault_kv_secret_v2.restapi.data.uri
+}
+
+resource "restapi_object" "hello" {
+  path = "/hello"
+  data = jsonencode(
+    {
+      id      = 1
+      message = "Hello World!"
+    }
+  )
+}
+```
+
 ## !! Cleanup Digitalocean Account After Training !!
 
 Delete everything from Digitalocean account after training.

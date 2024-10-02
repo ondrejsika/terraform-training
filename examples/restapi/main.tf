@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "restapi" {
-  uri = data.vault_kv_secret_v2.restapi.data.uri
+  uri = "http://127.0.0.1:8000"
 }
 
 resource "restapi_object" "hello" {
