@@ -1,0 +1,15 @@
+name: vault
+services:
+  vault:
+    image: hashicorp/vault
+    restart: always
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: root
+      VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
+    ports:
+      - "8200:8200"
+    volumes:
+      - vault-data:/vault
+
+volumes:
+  vault-data:
