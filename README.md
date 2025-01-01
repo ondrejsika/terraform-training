@@ -135,6 +135,21 @@ Using environment variables
 export TF_PLUGIN_CACHE_DIR=$HOME/.terraform.d/plugin-cache
 ```
 
+## Own Terraform Provider Path Override
+
+If you are developing your own Terraform provider, you can use `dev_overrides` in `.terraformrc` to use your own provider binary.
+
+```hcl
+# .terraformrc
+
+provider_installation {
+  dev_overrides {
+    "sikalabsx/slu" = "/Users/ondrej/Projects/terraform-provider-slu/"
+  }
+  direct {}
+}
+```
+
 ## Build Infrastructure
 
 ### Gitignore
