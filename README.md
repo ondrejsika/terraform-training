@@ -1132,6 +1132,34 @@ Terradozer is a tool to destroy all resources using only Terraform state.
 
 Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules. It is not a replacement for Terraform, but rather a tool to help you work with Terraform more effectively.
 
+### Install Terragrunt
+
+<https://terragrunt.gruntwork.io/docs/getting-started/install/>
+
+MacOS:
+
+```
+brew install terragrunt
+```
+
+Linux using [slu](https://github.com/sikalabs/slu):
+
+```
+slu install-bin terragrunt
+```
+
+Windows:
+
+```
+choco install terragrunt
+```
+
+### Enable Terragrunt Tab Completion
+
+```
+terragrunt --install-autocomplete
+```
+
 ## What Next?
 
 ### Hashicorp Meetups
