@@ -296,7 +296,7 @@ Create `.terraform.lock.hcl` which will lock providers versions. This file will 
 ```
 terraform providers lock \
   -platform=darwin_arm64 \
-  -platform=darwin_amd64 \
+  -platform=windows_amd64 \
   -platform=linux_arm64 \
   -platform=linux_amd64
 ```
