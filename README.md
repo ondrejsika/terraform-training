@@ -389,7 +389,7 @@ A plugin for Terraform that makes a collection of related resources available. A
 
 Terraform providers are generally tied to a specific infrastructure provider, which might be DigitalOceam, AWS, CloudFlare, ...
 
-List of official providers: <https://www.terraform.io/docs/providers/index.html>
+List of official providers: <https://developer.hashicorp.com/terraform/language/providers>
 
 ### Environment Variable Configuration
 
