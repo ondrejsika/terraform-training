@@ -1128,6 +1128,10 @@ Terradozer is a tool to destroy all resources using only Terraform state.
 - Spotify - <https://github.com/conradludgate/terraform-provider-spotify>
 - Dominos - <https://github.com/nat-henderson/terraform-provider-dominos>
 
+## Terragrunt
+
+Terragrunt is a thin wrapper for Terraform that provides extra tools for working with multiple Terraform modules. It is not a replacement for Terraform, but rather a tool to help you work with Terraform more effectively.
+
 ## What Next?
 
 ### Hashicorp Meetups
