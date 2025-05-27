@@ -128,7 +128,7 @@ choco install terraform
 
 ### Provider Plugin Cache
 
-<https://www.terraform.io/cli/config/config-file#provider-plugin-cache>
+<https://developer.hashicorp.com/terraform/cli/config/config-file#provider-plugin-cache>
 
 Using `.terraformrc`
 
