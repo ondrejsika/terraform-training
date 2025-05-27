@@ -90,7 +90,7 @@ brew cask install terraform
 
 ### Linux
 
-Download from <https://terraform.io/downloads.html>
+Install instuction for Linux: <https://developer.hashicorp.com/terraform/install#linux>
 
 or using [slu](https://github.com/sikalabs/slu):
 
