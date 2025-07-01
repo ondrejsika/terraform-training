@@ -13,6 +13,7 @@
 !*.EXAMPLE.tfvars
 .infracost
 *.tgz
+.terragrunt-cache
 
 # Config
 config.env.sh
