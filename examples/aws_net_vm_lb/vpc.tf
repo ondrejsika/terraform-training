@@ -27,6 +27,9 @@ resource "aws_internet_gateway" "igw" {
 
 resource "aws_route_table" "rt" {
   vpc_id = aws_vpc.vpc.id
+  tags = {
+    Name = "${local.project}-rtb"
+  }
 
   route {
     cidr_block = "0.0.0.0/0"
