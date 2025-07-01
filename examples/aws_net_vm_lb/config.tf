@@ -1,0 +1,3 @@
+locals {
+  project = "hello-generali"
+}
