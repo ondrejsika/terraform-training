@@ -167,12 +167,16 @@ Base `.gitignore` for Terraform projects
 ```gitignore
 .terraform
 *.tfstate
+*.tfplan
 *.tfvars
 !*.EXAMPLE.tfvars
 *.tfplan
 .terraform.tfstate.lock.info
 *.backup
 override.tf
+
+# Terragrunt
+.terragrunt-cache
 
 # Infracost
 .infracost
