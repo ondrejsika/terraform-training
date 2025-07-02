@@ -321,6 +321,12 @@ If you want to save the plan and execute it, you can use parameter `-out terrafo
 terraform plan -out terraform.tfplan
 ```
 
+### Terraform Plan to JSON
+
+```
+terraform show -json terraform.tfplan
+```
+
 ### `terraform apply`
 
 Terraform apply apply your desired state to actual state.
