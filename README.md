@@ -1291,6 +1291,10 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 - AWS Example - https://github.com/sika-training-examples/2025-07-01-generali-terraform-example
 
+#### 2024-08-09 J&T
+
+- https://github.com/sika-training-examples/2024-08-09-jt-terraform-example
+
 #### 2024-02-20 Root.cz
 
 - Step by step examples - https://github.com/sika-training-examples/2024-02-20-terraform-step-by-step-example
