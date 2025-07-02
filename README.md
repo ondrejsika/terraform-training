@@ -798,6 +798,24 @@ resource "aws_instance" "example" {
 }
 ```
 
+## Partial Ignore Changes
+
+```hcl
+resource "azurerm_resource_group" "example" {
+  name     = "example"
+  location = "westeurope"
+  tags = {
+    environment = "prod"
+    created_date = formatdate("YYYY-MM-DD", timestamp())
+  }
+  lifecycle {
+    ignore_changes = [
+      tags["created_date"]
+    ]
+  }
+}
+```
+
 ## Terraform State
 
 Use `terraform state ...` for state management.
