@@ -1287,6 +1287,15 @@ Wanna to go for a beer or do some work together? Just [book me](https://book-me.
 
 ## Training Sessions
 
+#### 2025-07-02 J&T
+
+- Terragrunt example - https://github.com/sika-training-examples/2025-07-02-jt-terragrunt-example
+- Monorepo without Terragrunt - https://github.com/sika-training-examples/2025-07-02-jt-terraform-monorepo-example
+
+From previous J&T training:
+
+- https://github.com/sika-training-examples/2024-08-09-jt-terraform-example
+
 #### 2025-07-01 Generali
 
 - AWS Example - https://github.com/sika-training-examples/2025-07-01-generali-terraform-example
