@@ -825,6 +825,33 @@ Use `terraform state ...` for state management.
 - `terraform state rm <resource_name>` - remove resource from state
 - `terraform state mv <resource_name> <new_resource_name>` - rename resource in state
 
+## Declarative State Move
+
+https://developer.hashicorp.com/terraform/language/moved
+
+```hcl
+moved {
+  from = <old path in the state>
+  to = <new path in the state>
+}
+```
+
+Example:
+
+```hcl
+moved {
+  from = aws_instance.example
+  to = aws_instance.new_example
+}
+```
+
+```hcl
+moved {
+  from = aws_instance.example
+  to = module.example_vm.aws_instance.this
+}
+```
+
 ## Backends
 
 [Docs](https://www.terraform.io/docs/backends/index.html)
