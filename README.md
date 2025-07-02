@@ -977,6 +977,22 @@ terraform {
 terraform import aws_instance.foo i-abcdefgh
 ```
 
+## Declarative Import
+
+https://developer.hashicorp.com/terraform/language/import
+
+```hcl
+resource "aws_instance" "example" {
+  name = "example"
+  # (other resource arguments...)
+}
+
+import {
+  to = aws_instance.example
+  id = "i-abcd1234"
+}
+```
+
 ## Modules
 
 [Docs](https://www.terraform.io/docs/modules/index.html) | [Configuration Docs](https://www.terraform.io/docs/configuration/modules.html)
