@@ -31,11 +31,15 @@ For sharing links & "secrets".
 - Microsoft Teams
 - https://sika.link/chat (tlk.io)
 
+<!--
+
 ## DevOps Kniha (Czech only)
 
 [![](./images/devops_kniha.jpg)](https://kniha.sika.io)
 
 <https://kniha.sika.io>
+
+-->
 
 ## What is a Terraform
 
