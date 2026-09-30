@@ -563,6 +563,17 @@ output "foo" {
 
 See full example [examples/sensitive](./examples/sensitive)
 
+## Ephemeral Values & Write-Only Arguments
+
+Since Terraform 1.10, values can be **ephemeral**: they exist only during the current `plan`/`apply` and are never written to the state file.
+
+- `ephemeral` blocks declare a resource whose result is ephemeral, e.g. `ephemeral "random_password" "example" { length = 16 }`.
+- Write-only arguments (attribute names conventionally suffixed `_wo`, like `data_json_wo` on `vault_kv_secret_v2`) accept an ephemeral value and pass it to the provider without ever persisting it in state or plan output. Since Terraform can't diff a value it never stores, a companion `..._wo_version` argument (e.g. `data_json_wo_version`) has to be bumped manually to tell Terraform the value changed.
+
+This is useful for feeding secrets (passwords, tokens, keys) into resources without leaving them behind in the state file.
+
+See full example [examples/ephemeral_write_only](./examples/ephemeral_write_only)
+
 ## Locals
 
 ```hcl
