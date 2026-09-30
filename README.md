@@ -111,7 +111,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashi
 sudo apt update && sudo apt install terraform
 ```
 
-or using [slu](https://github.com/sikalabs/slu):
+or using [slu](https://github.com/sikalabs/slu) (static binary):
 
 ```
 slu install-bin terraform
@@ -1237,7 +1237,7 @@ MacOS:
 brew install terragrunt
 ```
 
-Linux using [slu](https://github.com/sikalabs/slu):
+Linux using [slu](https://github.com/sikalabs/slu) (static binary):
 
 ```
 slu install-bin terragrunt
