@@ -392,7 +392,7 @@ terraform untaint digitalocean_droplet.example
 
 ### `terraform destroy`
 
-Terraform destroy destroys your ifrastructure created by Terraform.
+Terraform destroy destroys your infrastructure created by Terraform.
 
 ```
 terraform destroy
