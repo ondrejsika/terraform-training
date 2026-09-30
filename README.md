@@ -1044,6 +1044,32 @@ A module is a container for multiple resources that are used together. Modules c
 
 See example modules in [modules example](examples/modules)
 
+### Module from Public Git Repository
+
+See example in [examples/dogsay_module_from_public_git](examples/dogsay_module_from_public_git)
+
+```hcl
+module "module" {
+  source = "git::<protocol>://github.com/your/repo.git//path/to/module/in/repo"
+
+  # (other resource arguments...)
+}
+```
+
+Example usage:
+
+```hcl
+module "dogsay" {
+  source = "git::https://github.com/ondrejsika/terraform-training.git//modules/dogsay"
+
+  text = "Woof Woof!"
+}
+
+output "dogsay_output" {
+  value = module.dogsay.output
+}
+```
+
 ## Terraform Registry
 
 [Docs](https://www.terraform.io/docs/registry/index.html) |
