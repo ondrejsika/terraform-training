@@ -1070,6 +1070,20 @@ output "dogsay_output" {
 }
 ```
 
+Or with SSH
+
+```hcl
+module "dogsay_ssh" {
+  source = "git::ssh://git@github.com/ondrejsika/terraform-training.git//modules/dogsay"
+
+  text = "Woof Woof from SSH!"
+}
+
+output "dogsay_ssh_output" {
+  value = module.dogsay_ssh.output
+}
+```
+
 ## Terraform Registry
 
 [Docs](https://www.terraform.io/docs/registry/index.html) |
