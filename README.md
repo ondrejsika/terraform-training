@@ -1046,7 +1046,12 @@ See example modules in [modules example](examples/modules)
 
 ### Module from Public Git Repository
 
-See example in [examples/dogsay_module_from_public_git](examples/dogsay_module_from_public_git)
+Docs: https://developer.hashicorp.com/terraform/language/block/module#git-repository
+
+See examples in:
+
+- [examples/dogsay_module_from_public_git](examples/dogsay_module_from_public_git)
+- [examples/dogsay_module_from_ssh_git](examples/dogsay_module_from_ssh_git)
 
 ```hcl
 module "module" {
