@@ -85,6 +85,19 @@ Terragrunt is a thin wrapper for Terraform that provides extra tools for working
 - https://terragrunt.gruntwork.io/
 - https://github.com/gruntwork-io/terragrunt
 
+### Terraform vs Crossplane
+
+Crossplane is a Kubernetes-native way to provision and manage infrastructure. It extends the Kubernetes API with Custom Resource Definitions (CRDs) representing cloud resources, and uses controllers to continuously reconcile actual state with desired state, the same control loop model Kubernetes uses for Pods and Deployments.
+
+Terraform is CLI-driven with an explicit `plan`/`apply` workflow: you decide when changes are calculated and applied. Crossplane is controller-driven: once a resource manifest is applied to the cluster, Crossplane continuously reconciles it in the background, self-healing drift without you re-running anything.
+
+Terraform uses HCL, state files, and modules. Crossplane uses Kubernetes YAML manifests, stores state as Kubernetes objects (etcd), and uses **Compositions** (via XRDs) instead of modules to build reusable abstractions.
+
+Crossplane makes most sense if you're already operating on Kubernetes and want infrastructure managed the same way as your workloads (via `kubectl`/GitOps). Terraform is provider-agnostic and doesn't require a Kubernetes cluster to run.
+
+- https://www.crossplane.io/
+- https://docs.crossplane.io/latest/concepts/compare-crossplane-to-terraform/
+
 ## How Terraform Works
 
 Terraform create Graph of your desired resources described in manifest files, compares them with actual state (which is stored in state file or backend) and apply only changes using APIs of resource providers.
