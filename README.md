@@ -316,7 +316,7 @@ terraform providers lock \
   -platform=linux_amd64
 ```
 
-### `terraforn plan`
+### `terraform plan`
 
 Terraform plan creates execution plan. Compare your `.tf` manifests with actual state and determines which resources has to be created, updated or deleted.
 
