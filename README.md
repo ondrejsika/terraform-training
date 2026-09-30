@@ -1050,7 +1050,7 @@ See example in [examples/dogsay_module_from_public_git](examples/dogsay_module_f
 
 ```hcl
 module "module" {
-  source = "git::<protocol>://github.com/your/repo.git//path/to/module/in/repo"
+  source = "git::https://github.com/your/repo.git//path/to/module/in/repo"
 
   # (other resource arguments...)
 }
@@ -1071,6 +1071,16 @@ output "dogsay_output" {
 ```
 
 Or with SSH
+
+```hcl
+module "module" {
+  source = "git::ssh://git@github.com/your/repo.git//path/to/module/in/repo"
+
+  # (other resource arguments...)
+}
+```
+
+example with SSH:
 
 ```hcl
 module "dogsay_ssh" {
